@@ -1,0 +1,66 @@
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.02), rgba(0,0,0,0.05));
+}
+
+.price-chart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.chart-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.price-labels {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #666;
+  padding: 0.5rem 0;
+}
+
+.price-label {
+  background-color: rgba(255,255,255,0.8);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chart-container {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.05));
+  }
+  
+  .grid-line {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .price-label {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+  }
+}
